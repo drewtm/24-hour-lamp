@@ -3,7 +3,7 @@
 #include <Time.h>         //http://www.arduino.cc/playground/Code/Time
 #include <Wire.h>
 #define PIN 6
-#define NUMPIX 61
+#define NUMPIX 60
 
 
 // Parameter 1 = number of pixels in strip
@@ -43,10 +43,6 @@ unsigned int colors[][6] = {
 
 
 void setup() {
-  pinMode(A2, OUTPUT);
-  pinMode(A3, OUTPUT);
-  digitalWrite(A2, LOW);
-  digitalWrite(A3, HIGH);
   setSyncProvider(RTC.get);
   strip.begin();
   strip.show(); // Initialize all pixels to 'off'
